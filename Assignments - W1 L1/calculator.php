@@ -9,19 +9,19 @@ $operand2 = $options['operand2'];
 
 
 switch ($operator){
-    case "addition":
+    case "minus":
         echo $operand1+$operand2;
         break;
 
-    case "subtraction":
+    case "plus":
         echo $operand1-$operand2;
         break;
 
-    case "multiplication":
+    case "multiply":
         echo $operand1*$operand2;
         break;   
         
-    case "division":
+    case "divide":
         echo $operand1/$operand2;
         break;
 }
