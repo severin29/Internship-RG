@@ -36,7 +36,7 @@ This project is a console-based implementation of the popular game show "Who Wan
 
 4. **Code Structure:**
 
-- millionaire.php: The main script that runs the game. <br>
+- WWTBAM.php: The main script that runs the game. <br>
 - README.md: This file, providing an overview of the project. <br>
 - Question Bank: The questions are stored within the script in an array format. You can modify or expand the questions as needed.
 
