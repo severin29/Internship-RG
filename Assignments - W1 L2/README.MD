@@ -29,11 +29,11 @@ This project is a console-based implementation of the popular game show "Who Wan
 
 3. **Gameplay Instructions:**
 
-The game will prompt you to enter a player name.
-You will be presented with a series of multiple-choice questions. Type the letter corresponding to your chosen answer and press Enter.
-After each question, you can decide whether to continue or walk away with your current winnings.
-If you answer incorrectly, the game will end for that player, and their score will be added to the scoreboard.
-After all players have finished, a final scoreboard will be displayed.
+- The game will prompt you to enter a player name. <br>
+- You will be presented with a series of multiple-choice questions. Type the letter corresponding to your chosen answer and press Enter. <br>
+- After each question, you can decide whether to continue or walk away with your current winnings. <br>
+- If you answer incorrectly, the game will end for that player, and their score will be added to the scoreboard. <br>
+- After all players have finished, a final scoreboard will be displayed.
 
 4. **Code Structure:**
 
