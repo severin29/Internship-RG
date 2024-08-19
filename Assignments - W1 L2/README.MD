@@ -21,12 +21,12 @@ This project is a console-based implementation of the popular game show "Who Wan
    git clone https://github.com/yourusername/millionaire-php-cli.git
    cd millionaire-php-cli
 
-2. Run the game:
+2. **Run the game:**
 
   ```bash
   php millionaire.php
 
-3. Gameplay Instructions:
+3. **Gameplay Instructions:**
 
 The game will prompt you to enter a player name.
 You will be presented with a series of multiple-choice questions. Type the letter corresponding to your chosen answer and press Enter.
@@ -34,13 +34,13 @@ After each question, you can decide whether to continue or walk away with your c
 If you answer incorrectly, the game will end for that player, and their score will be added to the scoreboard.
 After all players have finished, a final scoreboard will be displayed.
 
-4. Code Structure
+4. **Code Structure:**
 
 millionaire.php: The main script that runs the game.
 README.md: This file, providing an overview of the project.
 Question Bank: The questions are stored within the script in an array format. You can modify or expand the questions as needed.
 
-5. Customization
+5. **Customization:**
 
 Adding Questions: You can add more questions by editing the $questions array in millionaire.php.
 Changing Prizes: Modify the $prizes array in the script to change the prize amounts for each question.
