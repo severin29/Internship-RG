@@ -18,13 +18,12 @@ This project is a console-based implementation of the popular game show "Who Wan
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/millionaire-php-cli.git
-   cd millionaire-php-cli
+   gh repo clone severin29/Internship-RG
 
 2. **Run the game:**
 
   ```bash
-  php millionaire.php
+  php wwtbam.php
   ```
 
 3. **Gameplay Instructions:**
