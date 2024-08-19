@@ -37,8 +37,8 @@ After all players have finished, a final scoreboard will be displayed.
 
 4. **Code Structure:**
 
-millionaire.php: The main script that runs the game.
-README.md: This file, providing an overview of the project.
+millionaire.php: The main script that runs the game. <br>
+README.md: This file, providing an overview of the project. <br>
 Question Bank: The questions are stored within the script in an array format. You can modify or expand the questions as needed.
 
 5. **Customization:**
