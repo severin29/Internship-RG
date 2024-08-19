@@ -26,6 +26,7 @@ This project is a console-based implementation of the popular game show "Who Wan
   ```bash
   php millionaire.php
 
+
 3. **Gameplay Instructions:**
 
 The game will prompt you to enter a player name.
