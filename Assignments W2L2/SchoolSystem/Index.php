@@ -15,7 +15,8 @@ $teacherSubjects = [];
 $studentSubjects = [];
 $maxAttempts = 3;
 $attempts = $maxAttempts;
-function login ($username, $password, $users) {
+function login($username, $password, $users)
+{
     foreach ($users as $user) {
         if ($user->login($username, $password)) {
             return $user;
@@ -24,7 +25,8 @@ function login ($username, $password, $users) {
     return null;
 }
 
-function validPassword ($password) {
+function validPassword($password)
+{
     $pattern = '/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[\W_]).{8,}$/';
     if (preg_match($pattern, $password)) {
         return true;
@@ -32,7 +34,8 @@ function validPassword ($password) {
     return false;
 }
 
-function validSubjectName($subjectName) {
+function validSubjectName($subjectName)
+{
     if (trim($subjectName) == "" || strlen($subjectName) < 2) {
         return false;
     }
@@ -56,7 +59,7 @@ while ($attempts > 0) {
 
 
         if ($currentUser instanceof Admin) {
-            while (true){
+            while (true) {
                 echo "1. Add Teacher \n";
                 echo "2. Add Student \n";
                 echo "3. Add Subject \n";
@@ -127,16 +130,16 @@ while ($attempts > 0) {
 
                     case "3":
 
-                        do{
+                        do {
 
                             echo "Enter subject name: \n";
                             $subjectName = trim(fgets(STDIN));
 
-                            if(!validSubjectName($subjectName)){
+                            if (!validSubjectName($subjectName)) {
                                 echo "Subject name is not valid. Please try again.\n";
                             }
 
-                        }while(!validSubjectName($subjectName));
+                        } while (!validSubjectName($subjectName));
 
                         $currentUser->addSubject($subjects, $subjectName);
                         echo "Subject added successfully! \n";
@@ -204,7 +207,7 @@ while ($attempts > 0) {
 
                         do {
                             echo "Enter grade (2-6): ";
-                            $grade = (int)trim(fgets(STDIN));
+                            $grade = (int) trim(fgets(STDIN));
 
                             if ($grade < 2 || $grade > 6) {
                                 echo "Invalid grade. Please enter a grade between 2 and 6. \n";
@@ -219,9 +222,7 @@ while ($attempts > 0) {
                         break 2;
                 }
             }
-        }
-
-        elseif ($currentUser instanceof Student) {
+        } elseif ($currentUser instanceof Student) {
             while (true) {
                 echo "1. View Grades \n";
                 echo "2. Logout \n";

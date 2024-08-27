@@ -17,7 +17,7 @@ class Student extends User
             foreach ($grades[$this->username] as $subject => $subjectGrades) {
                 echo "Subject: " . $subject . ", Grades: " . implode(", ", $subjectGrades) . "\n";
 
-                echo "Average grade for $subject: " . (float)array_sum($subjectGrades) / count($subjectGrades) . "\n";
+                echo "Average grade for $subject: " . (float) array_sum($subjectGrades) / count($subjectGrades) . "\n";
             }
         } else {
             echo "You have no grades. \n";
