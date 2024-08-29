@@ -391,6 +391,11 @@ footer {
     height: 20%;
 }
 
+.card button:hover{
+    background-color: #040404;
+    color: #D3A246;
+}
+
 .card input {
     margin-left: 2vh;
     margin-right: 2vh;
@@ -440,6 +445,11 @@ footer {
     border-radius: 5px;
     width: 16vh;
     height: 50%;
+}
+
+.search div button:hover {
+    color: #D3A246;
+    background-color: #040404;
 }
 
 .search div input {

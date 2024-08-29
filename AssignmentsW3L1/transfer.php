@@ -47,7 +47,7 @@ include './footer.php';
                 <div class="card">
                     <p>Available USDT: 20003.31 USDT</p>
                     <input type="number">
-                    <button>Deposit</button>
+                    <button>Withdraw</button>
                 </div>
             </div>
         </div>
