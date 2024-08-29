@@ -2,14 +2,6 @@
 
 This is an example of how a cryptocurrency exchange website might look like. It's built using vanilla HTML, CSS, and some PHP for including already made components, thus speeding up the process. 
 
-## Table of Contents
-- [Features](#features)
-- [Requirements](#requirements)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Testing](#testing)
-- [Notes](#notes)
-
 ## Features
 
 ### Non-intrusive design
