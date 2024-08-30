@@ -1,4 +1,4 @@
-/*function showSecondNav(){
+function showSecondNav(){
     var x = document.getElementById("secondNav");
     var y = document.getElementById("overview");
     if (x.style.display === "none") {
@@ -8,4 +8,4 @@
         x.style.display = "none";
         y.style.paddingLeft = "23.55555%";
     }
-}*/
+}
