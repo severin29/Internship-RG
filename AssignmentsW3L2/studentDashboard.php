@@ -10,7 +10,7 @@ if (!isset($_SESSION['currentUser']) || unserialize($_SESSION['currentUser'])->g
 }
 $currentUser = unserialize($_SESSION['currentUser']);
 $grades = $currentUser->viewGrades();
-
+$averageGrades = $currentUser->getAverageGrades();
 ?>
 
 <!DOCTYPE html>
@@ -54,6 +54,27 @@ $grades = $currentUser->viewGrades();
                         <td>' . $grade[2] . '</td>
                         <td>' . $grade[3] . '</td>
                       </tr>';
+        }
+        ?>
+        </tbody>
+    </table>
+</div>
+<div class="container mt-5">
+    <h4>Average Grades by Subject</h4>
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>Subject</th>
+            <th>Average Grade</th>
+        </tr>
+        </thead>
+        <tbody>
+        <?php foreach ($averageGrades as $subject => $average) {
+
+            echo '<tr>
+                <td>' . $subject . '</td>
+                <td>' . (number_format($average, 2)) . '</td>
+            </tr>';
         }
         ?>
         </tbody>
