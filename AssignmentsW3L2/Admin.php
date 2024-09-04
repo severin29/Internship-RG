@@ -47,16 +47,26 @@ class Admin extends User
 
     public function removeSubject($subject) {
         $subjects = readCSV('subjects.csv');
+        $grades = readCSV('grades.csv');
 
         $updatedSubjects = array_filter($subjects, function ($existingSubject) use ($subject) {
             return $existingSubject[0] !== $subject; // Assuming subject is the first element
         });
 
         $file = fopen('subjects.csv', 'w');
+        $file2 = fopen('grades.csv', 'w');
         foreach ($updatedSubjects as $existingSubject) {
             fputcsv($file, $existingSubject);
         }
+        $updatedGrades = array_filter($grades, function ($existingGrade) use ($subject) {
+            return $existingGrade[1] !== $subject;
+        });
+
+        foreach ($updatedGrades as $existingGrade) {
+            fputcsv($file2, $existingGrade);
+        }
         fclose($file);
+
     }
 
 }

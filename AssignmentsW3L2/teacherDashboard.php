@@ -75,33 +75,44 @@ $_SESSION['subjectsTaught'] = $currentUser->getSubjectsTaught();
         </tbody>
     </table>
 
-<div class="container">
-    <h3>Grade a Student</h3>
-    <hr>
-    <form method="POST" action="gradeStudent.php">
-        <div class="form-group">
-            <label for="student_username">Student Username</label>
-            <input type="text" class="form-control" id="student_username" name="student_username" required>
-        </div>
-        <div class="form-group">
-            <label for="subject">Subject</label>
-            <select class="form-control" id="subject" name="subject">
-                <?php foreach ($currentUser->getSubjectsTaught() as $subject) {
-                    echo '<option value='.$subject. '>'; echo $subject .'</option>';
-                }
-                ?>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="grade">Grade Type</label>
-            <input type="text" class="form-control" id="grade_type" name="grade_type" placeholder="Homework, Quiz, Midterm, Final" required>
-        </div>
-        <div class="form-group">
-            <label for="grade">Grade</label>
-            <input type="text" class="form-control" id="grade" name="grade" placeholder="2-6" required>
-        </div>
-        <button type="submit" name="assign_grade" class="btn btn-primary">Assign Grade</button>
-    </form>
-</div>
+    <div class="container">
+        <h3>Grade a Student</h3>
+        <hr>
+        <form method="POST" action="gradeStudent.php">
+            <div class="form-group">
+                <label for="student_username">Student Username</label>
+                <input type="text" class="form-control" id="student_username" name="student_username" required>
+            </div>
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <select class="form-control" id="subject" name="subject">
+                    <?php foreach ($currentUser->getSubjectsTaught() as $subject) {
+                        echo '<option value='.$subject. '>'; echo $subject .'</option>';
+                    }
+                    ?>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="grade">Grade Type</label>
+                <select class="form-control" id="grade_type" name="grade_type" required>
+                    <option value="Homework">Homework</option>
+                    <option value="Quiz">Quiz</option>
+                    <option value="Midterm">Midterm</option>
+                    <option value="Final">Final</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="grade">Grade</label>
+                <select name="grade" id="grade" class="form-control" required>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+            </div>
+            <button type="submit" name="assign_grade" class="btn btn-primary">Assign Grade</button>
+        </form>
+    </div>
 </body>
 </html>
