@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1f88c3bf-0881-4d78-9a1b-b821ebfffee3" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerConfigs">
+    <option name="configs">
+      <option value="$PROJECT_DIR$/AssignmentsW4L1/composer.json" />
+      <option value="$PROJECT_DIR$/Assignments W2L2/SchoolSystem/composer.json" />
+    </option>
+  </component>
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/AssignmentsW3L2/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "severin29"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/severin29/Internship-RG.git",
+    "accountId": "f3f55de0-164b-46d5-94dd-ca32cec8d504"
+  }
+}]]></component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="/usr/local/Cellar/php/8.3.10/bin/php">
+    <include_path>
+      <path value="$PROJECT_DIR$/AssignmentsW3L2/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/AssignmentsW3L2/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/AssignmentsW3L2/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/AssignmentsW3L2/vendor/phpunit/php-invoker" />
+      <path value="$PROJECT_DIR$/AssignmentsW3L2/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/AssignmentsW3L2/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/AssignmentsW3L2/vendor/composer" />
+      <path value="$PROJECT_DIR$/AssignmentsW3L2/vendor/sebastian/type" />
+      <path value="$PROJECT_DIR$/AssignmentsW3L2/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/AssignmentsW3L2/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/AssignmentsW3L2/vendor/sebastian/lines-of-code" />
+      <path value="$PROJECT_DIR$/AssignmentsW3L2/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/AssignmentsW3L2/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/AssignmentsW3L2/vendor/sebastian/code-unit" />
+      <path value="$PROJECT_DIR$/AssignmentsW3L2/vendor/sebastian/cli-parser" />
+      <path value="$PROJECT_DIR$/AssignmentsW3L2/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/AssignmentsW3L2/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/AssignmentsW3L2/vendor/sebastian/complexity" />
+      <path value="$PROJECT_DIR$/AssignmentsW3L2/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/AssignmentsW3L2/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/AssignmentsW3L2/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/AssignmentsW3L2/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/AssignmentsW3L2/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/AssignmentsW3L2/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/AssignmentsW3L2/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/AssignmentsW3L2/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/AssignmentsW3L2/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/AssignmentsW4L1/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/AssignmentsW4L1/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/AssignmentsW4L1/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/AssignmentsW4L1/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/AssignmentsW4L1/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/AssignmentsW4L1/vendor/sebastian/type" />
+      <path value="$PROJECT_DIR$/AssignmentsW4L1/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/AssignmentsW4L1/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/AssignmentsW4L1/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/AssignmentsW4L1/vendor/sebastian/lines-of-code" />
+      <path value="$PROJECT_DIR$/AssignmentsW4L1/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/AssignmentsW4L1/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/AssignmentsW4L1/vendor/phpunit/php-invoker" />
+      <path value="$PROJECT_DIR$/AssignmentsW4L1/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/AssignmentsW4L1/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/AssignmentsW4L1/vendor/sebastian/code-unit" />
+      <path value="$PROJECT_DIR$/AssignmentsW4L1/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/AssignmentsW4L1/vendor/sebastian/cli-parser" />
+      <path value="$PROJECT_DIR$/AssignmentsW4L1/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/AssignmentsW4L1/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/AssignmentsW4L1/vendor/sebastian/complexity" />
+      <path value="$PROJECT_DIR$/AssignmentsW4L1/vendor/composer" />
+      <path value="$PROJECT_DIR$/AssignmentsW4L1/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/AssignmentsW4L1/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/AssignmentsW4L1/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/AssignmentsW4L1/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/AssignmentsW4L1/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/Assignments W2L2/SchoolSystem/vendor/sebastian/cli-parser" />
+      <path value="$PROJECT_DIR$/Assignments W2L2/SchoolSystem/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/Assignments W2L2/SchoolSystem/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/Assignments W2L2/SchoolSystem/vendor/sebastian/complexity" />
+      <path value="$PROJECT_DIR$/Assignments W2L2/SchoolSystem/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/Assignments W2L2/SchoolSystem/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/Assignments W2L2/SchoolSystem/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/Assignments W2L2/SchoolSystem/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/Assignments W2L2/SchoolSystem/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/Assignments W2L2/SchoolSystem/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/Assignments W2L2/SchoolSystem/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/Assignments W2L2/SchoolSystem/vendor/composer" />
+      <path value="$PROJECT_DIR$/Assignments W2L2/SchoolSystem/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/Assignments W2L2/SchoolSystem/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/Assignments W2L2/SchoolSystem/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/Assignments W2L2/SchoolSystem/vendor/phpunit/php-invoker" />
+      <path value="$PROJECT_DIR$/Assignments W2L2/SchoolSystem/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/Assignments W2L2/SchoolSystem/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/Assignments W2L2/SchoolSystem/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/Assignments W2L2/SchoolSystem/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/Assignments W2L2/SchoolSystem/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/Assignments W2L2/SchoolSystem/vendor/sebastian/type" />
+      <path value="$PROJECT_DIR$/Assignments W2L2/SchoolSystem/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/Assignments W2L2/SchoolSystem/vendor/sebastian/lines-of-code" />
+      <path value="$PROJECT_DIR$/Assignments W2L2/SchoolSystem/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/Assignments W2L2/SchoolSystem/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/Assignments W2L2/SchoolSystem/vendor/sebastian/code-unit" />
+    </include_path>
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 4
+}]]></component>
+  <component name="ProjectId" id="2lcHh2cZ4LZHnP4jJVNlPjUCO7j" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/severin.kolakov/Desktop/Internship-RG/Internship-RG/AssignmentsW3L2",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/AssignmentsW3L2" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-PS-242.21829.154" />
+        <option value="bundled-php-predefined-a98d8de5180a-4d9f4c849d09-com.jetbrains.php.sharedIndexes-PS-242.21829.154" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1f88c3bf-0881-4d78-9a1b-b821ebfffee3" name="Changes" comment="" />
+      <created>1725472559642</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1725472559642</updated>
+      <workItem from="1725472560705" duration="720000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
