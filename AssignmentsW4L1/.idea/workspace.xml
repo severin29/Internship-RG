@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e5ac3f7b-c6d5-4fc6-9dcf-7b702c283343" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="/usr/local/Cellar/php/8.3.10/bin/php" />
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2lYJRBQmUnP6DWXrVCSk22J0afo" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "PHPUnit.Test.executor": "Run",
+    "PHPUnit.Test.testCreateNewTeacher.executor": "Run",
+    "PHPUnit.Test.testGetAllTeachers.executor": "Run",
+    "PHPUnit.Test.testGetTeacherById.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary": "PHPUnit",
+    "last_opened_file_path": "/Users/severin.kolakov/Desktop/W4L1",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="PHPUnit.Test.testGetTeacherById">
+    <configuration name="Test" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Test" file="$PROJECT_DIR$/Test.php" scope="Class" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test.testCreateNewTeacher" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Test" file="$PROJECT_DIR$/Test.php" method="testCreateNewTeacher" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test.testGetAllTeachers" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Test" file="$PROJECT_DIR$/Test.php" method="testGetAllTeachers" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test.testGetTeacherById" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Test" file="$PROJECT_DIR$/Test.php" method="testGetTeacherById" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHPUnit.Test.testGetTeacherById" />
+        <item itemvalue="PHPUnit.Test.testCreateNewTeacher" />
+        <item itemvalue="PHPUnit.Test.testGetAllTeachers" />
+        <item itemvalue="PHPUnit.Test" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-PS-242.21829.154" />
+        <option value="bundled-php-predefined-a98d8de5180a-4d9f4c849d09-com.jetbrains.php.sharedIndexes-PS-242.21829.154" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e5ac3f7b-c6d5-4fc6-9dcf-7b702c283343" name="Changes" comment="" />
+      <created>1725351065772</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1725351065772</updated>
+      <workItem from="1725351066814" duration="753000" />
+      <workItem from="1725380174083" duration="5129000" />
+      <workItem from="1725435032209" duration="164000" />
+      <workItem from="1725435197800" duration="11000" />
+      <workItem from="1725435226092" duration="1826000" />
+      <workItem from="1725437248170" duration="1260000" />
+      <workItem from="1725457485313" duration="1489000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "username": "teacher2",
+    "password": "teacher2",
+    "name": "Teacher Teacherov",
+    "subjects": [
+      "English",
+      "History"
+    ]
+  },
+  {
+    "id": 2,
+    "username": "severin",
+    "password": "severinpass",
+    "name": "severin kolakov",
+    "subjects": [
+      "English",
+      "Music"
+    ]
+  },
+  {
+    "id": 3,
+    "username": "severin",
+    "password": "severinpass",
+    "name": "severin kolakov",
+    "subjects": [
+      "English",
+      "Music"
+    ]
+  }
+]

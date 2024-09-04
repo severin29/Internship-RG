@@ -1,0 +1,1 @@
+{"version":1,"defects":{"Test::testGetAllTeachers":7,"Test::testGetTeacherById":7,"Test::testCreateNewTeacher":7,"Test::testUpdateTeacher":7,"Test::testDeleteTeacher":7},"times":{"Test::testGetAllTeachers":0.007,"Test::testGetTeacherById":0.012,"Test::testCreateNewTeacher":0.013,"Test::testUpdateTeacher":0.002,"Test::testDeleteTeacher":0.002}}
