@@ -5,10 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f88c3bf-0881-4d78-9a1b-b821ebfffee3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/AssignmentsW4L2/SportsManagement/dashboard.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AssignmentsW4L2/SportsManagement/db.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AssignmentsW4L2/SportsManagement/login.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AssignmentsW4L2/SportsManagement/loginPage.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AssignmentsW4L2/SportsManagement/logout.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpunit.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AssignmentsW3L2/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentsW3L2/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AssignmentsW3L2/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentsW3L2/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,19 +136,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/severin.kolakov/Desktop/Internship-RG/Internship-RG/AssignmentsW3L2&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "AssignmentW4L2",
+    "last_opened_file_path": "/Users/severin.kolakov/Desktop/Internship-RG/Internship-RG/AssignmentsW3L2",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "database.output.results",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/AssignmentsW3L2" />
@@ -172,10 +181,17 @@
       <workItem from="1725516159591" duration="72000" />
       <workItem from="1725516255267" duration="145000" />
       <workItem from="1725520117838" duration="1016000" />
+      <workItem from="1725633093481" duration="105000" />
+      <workItem from="1725633256432" duration="6000" />
+      <workItem from="1725633271066" duration="4401000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
