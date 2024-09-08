@@ -1011,7 +1011,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <schema id="292" parent="1" name="sports">
-      <LastIntrospectionLocalTimestamp>2024-09-06.14:37:53</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2024-09-08.12:37:57</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <schema id="293" parent="1" name="sys">
@@ -1161,7 +1161,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Position>1</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="324" parent="300" name="name">
+    <column id="324" parent="300" name="teamName">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>varchar(225)|0s</StoredType>
@@ -1182,7 +1182,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="328" parent="301" name="id">
-      <AutoIncrement>1</AutoIncrement>
+      <AutoIncrement>2</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int|0s</StoredType>

@@ -1,12 +1,12 @@
 <?php
-include 'db.php';
-    session_start();
-    $_SESSION['username'];
+
+include "db.php";
+session_start();
+$_SESSION['username'];
 if (!isset($_SESSION['username'])) {
     header('Location: loginPage.php');
     exit();
 }
-
 ?>
 
 <html lang="en">
@@ -48,3 +48,4 @@ if (!isset($_SESSION['username'])) {
 
 </body>
 </html>
+

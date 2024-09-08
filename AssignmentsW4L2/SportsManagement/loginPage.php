@@ -22,7 +22,7 @@
                 <label for="password" class="block text-sm font-medium text-gray-700"></label>
                 <input type="password" name="password" placeholder="Enter password" required class="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
             </div>
-            <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">Login</button>
+            <button type="submit" class="w-full bg-red-600 text-white py-2 rounded-md hover:bg-black focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">Login</button>
         </form>
     </div>
 </body>

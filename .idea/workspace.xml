@@ -5,13 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f88c3bf-0881-4d78-9a1b-b821ebfffee3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/AssignmentsW4L2/SportsManagement/dashboard.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AssignmentsW4L2/SportsManagement/db.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AssignmentsW4L2/SportsManagement/login.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AssignmentsW4L2/SportsManagement/loginPage.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AssignmentsW4L2/SportsManagement/logout.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpunit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AssignmentsW4L2/SportsManagement/matches.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AssignmentsW4L2/SportsManagement/players.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AssignmentsW4L2/SportsManagement/teams.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fb8e9f0d-f3c9-4229-bf32-f185c0df3b35.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/fb8e9f0d-f3c9-4229-bf32-f185c0df3b35.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssignmentsW4L2/SportsManagement/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentsW4L2/SportsManagement/dashboard.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssignmentsW4L2/SportsManagement/db.php" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentsW4L2/SportsManagement/db.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssignmentsW4L2/SportsManagement/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentsW4L2/SportsManagement/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssignmentsW4L2/SportsManagement/loginPage.php" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentsW4L2/SportsManagement/loginPage.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +29,13 @@
   <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/AssignmentsW3L2/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -183,7 +192,7 @@
       <workItem from="1725520117838" duration="1016000" />
       <workItem from="1725633093481" duration="105000" />
       <workItem from="1725633256432" duration="6000" />
-      <workItem from="1725633271066" duration="4401000" />
+      <workItem from="1725633271066" duration="17763000" />
     </task>
     <servers />
   </component>
