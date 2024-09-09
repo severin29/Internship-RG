@@ -4,23 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f88c3bf-0881-4d78-9a1b-b821ebfffee3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/AssignmentsW4L2/SportsManagement/createMatch.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AssignmentsW4L2/SportsManagement/createPlayer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AssignmentsW4L2/SportsManagement/createTeam.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AssignmentsW4L2/SportsManagement/deleteMatch.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AssignmentsW4L2/SportsManagement/deletePlayer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AssignmentsW4L2/SportsManagement/deleteTeam.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AssignmentsW4L2/SportsManagement/editMatch.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AssignmentsW4L2/SportsManagement/editPlayer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AssignmentsW4L2/SportsManagement/editTeam.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fb8e9f0d-f3c9-4229-bf32-f185c0df3b35.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/fb8e9f0d-f3c9-4229-bf32-f185c0df3b35.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpunit.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AssignmentsW4L2/SportsManagement/matches.php" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentsW4L2/SportsManagement/matches.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AssignmentsW4L2/SportsManagement/players.php" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentsW4L2/SportsManagement/players.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AssignmentsW4L2/SportsManagement/teams.php" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentsW4L2/SportsManagement/teams.php" afterDir="false" />
-    </list>
+    <list default="true" id="1f88c3bf-0881-4d78-9a1b-b821ebfffee3" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -199,7 +183,7 @@
       <workItem from="1725633093481" duration="105000" />
       <workItem from="1725633256432" duration="6000" />
       <workItem from="1725633271066" duration="17917000" />
-      <workItem from="1725821487112" duration="24586000" />
+      <workItem from="1725821487112" duration="24682000" />
     </task>
     <servers />
   </component>
