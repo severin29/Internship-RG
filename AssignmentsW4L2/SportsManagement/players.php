@@ -15,7 +15,7 @@ if (!isset($_SESSION['username'])) {
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <title>Dashboard</title>
+    <title>Players</title>
 </head>
 <body>
 <nav class="flex items-center justify-between flex-wrap bg-black p-6">
@@ -43,11 +43,11 @@ if (!isset($_SESSION['username'])) {
             <a href="logout.php" class="inline-block text-lg px-4 py-2 leading-none border rounded text-white border-white hover:border-red-600 hover:text-red-600 hover:bg-black mt-4 lg:mt-0">Logout</a>
         </div>
     </div>
-</nav>
-
+</nav><br>
+<a href="createPlayer.php" class=" ml-16 inline-block text-lg px-4 py-2 leading-none border rounded text-black border-black hover:border-red-600 hover:text-red-600 hover:bg-black mt-4 lg:mt-0">Add New Player</a>
 <div class="mx-auto">
     <div class="relative flex flex-col w-full h-full overflow-scroll text-slate-300 bg-slate-800 shadow-md rounded-lg bg-clip-border">
-        <table class="w-full text-left table-auto min-w-max">
+        <table class="w-full text-left table-auto min-w-max mx-10">
             <thead>
             <tr>
                 <th class="p-4 border-b border-slate-600 bg-slate-700">
@@ -78,7 +78,7 @@ if (!isset($_SESSION['username'])) {
             <tbody>
 
             <?php
-                $sql = "SELECT name, position, age, teamName FROM players JOIN teams ON players.team_id = teams.id;";
+                $sql = "SELECT players.id, name, position, age, teamName FROM players JOIN teams ON players.team_id = teams.id;";
                 $result = mysqli_query($conn, $sql);
                 while ($row = mysqli_fetch_assoc($result)) {
 
@@ -87,8 +87,8 @@ if (!isset($_SESSION['username'])) {
                                 <td class='p-4 border-b border-slate-700 text-lg'>" . $row['position'] . "</td>
                                 <td class='p-4 border-b border-slate-700 text-lg'>" . $row['age'] . "</td>
                                 <td class='p-4 border-b border-slate-700 text-lg'>" . $row['teamName'] . "</td>
-                                <td class='p-4 border-b border-slate-700 text-lg'><button @click='open = true' class='inline-block text-lg px-4 py-2 leading-none border rounded text-black border-black hover:border-red-600 hover:text-red-600 hover:bg-black mt-4 lg:mt-0'>Edit</button></td>
-                                <td class='p-4 border-b border-slate-700 text-lg'><a href='delete.php' class='inline-block text-lg px-4 py-2 leading-none border rounded text-black border-black hover:border-red-600 hover:text-red-600 hover:bg-black mt-4 lg:mt-0'>Delete</a></td>
+                                <td class='p-4 border-b border-slate-700 text-lg'><a href='editPlayer.php?id=". $row['id']."' class='inline-block text-lg px-4 py-2 leading-none border rounded text-black border-black hover:border-red-600 hover:text-red-600 hover:bg-black mt-4 lg:mt-0'>Edit</a></td>
+                                <td class='p-4 border-b border-slate-700 text-lg'><a href='deletePlayer.php?id=" . $row['id']."' class='inline-block text-lg px-4 py-2 leading-none border rounded text-black border-black hover:border-red-600 hover:text-red-600 hover:bg-black mt-4 lg:mt-0'>Delete</a></td>
                           </tr>";
                 }
             ?>

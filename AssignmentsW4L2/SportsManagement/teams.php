@@ -16,7 +16,7 @@ if (!isset($_SESSION['username'])) {
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <title>Dashboard</title>
+    <title>Teams</title>
 </head>
 <body>
 <nav class="flex items-center justify-between flex-wrap bg-black p-6">
@@ -45,7 +45,54 @@ if (!isset($_SESSION['username'])) {
         </div>
     </div>
 </nav>
+<br>
+<a href="createTeam.php" class=" ml-16 inline-block text-lg px-4 py-2 leading-none border rounded text-black border-black hover:border-red-600 hover:text-red-600 hover:bg-black mt-4 lg:mt-0">Add New Team</a>
+<div class="mx-auto">
+    <div class="relative flex flex-col w-full h-full overflow-scroll text-slate-300 bg-slate-800 shadow-md rounded-lg bg-clip-border">
+        <table class="w-full text-left table-auto min-w-max mx-10">
+            <thead>
+            <tr>
+                <th class="p-4 border-b border-slate-600 bg-slate-700">
+                    <p class="text-2xl font-normal leading-none text-slate-300">
+                        Name
+                    </p>
+                </th>
+                <th class="p-4 border-b border-slate-600 bg-slate-700">
+                    <p class="text-2xl font-normal leading-none text-slate-300">
+                        City
+                    </p>
+                </th>
+                <th class="p-4 border-b border-slate-600 bg-slate-700">
+                    <p class="text-2xl font-normal leading-none text-slate-300">
+                        Edit
+                    </p>
+                </th>
+                <th class="p-4 border-b border-slate-600 bg-slate-700">
+                    <p class="text-2xl font-normal leading-none text-slate-300">
+                        Delete
+                    </p>
+                </th>
+            </tr>
+            </thead>
+            <tbody>
 
+            <?php
+            $sql = "SELECT * FROM teams;";
+            $result = mysqli_query($conn, $sql);
+            while ($row = mysqli_fetch_assoc($result)) {
+
+                echo "<tr class='hover:bg-slate-700'>
+                                <td class='p-4 border-b border-slate-700 text-lg'>" . $row['teamName'] . "</td>
+                                <td class='p-4 border-b border-slate-700 text-lg'>" . $row['city'] . "</td>
+                                <td class='p-4 border-b border-slate-700 text-lg'><a href='editTeam.php?id=". $row['id']."' class='inline-block text-lg px-4 py-2 leading-none border rounded text-black border-black hover:border-red-600 hover:text-red-600 hover:bg-black mt-4 lg:mt-0'>Edit</a></td>
+                                <td class='p-4 border-b border-slate-700 text-lg'><a href='deleteTeam.php?id=" . $row['id']."' class='inline-block text-lg px-4 py-2 leading-none border rounded text-black border-black hover:border-red-600 hover:text-red-600 hover:bg-black mt-4 lg:mt-0'>Delete</a></td>
+                          </tr>";
+            }
+            ?>
+            </tbody>
+        </table>
+    </div>
+</div>
 </body>
 </html>
 

@@ -16,7 +16,7 @@ if (!isset($_SESSION['username'])) {
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <title>Dashboard</title>
+    <title>Teams</title>
 </head>
 <body>
 <nav class="flex items-center justify-between flex-wrap bg-black p-6">
@@ -45,7 +45,78 @@ if (!isset($_SESSION['username'])) {
         </div>
     </div>
 </nav>
+<br>
+<a href="createMatch.php" class=" ml-16 inline-block text-lg px-4 py-2 leading-none border rounded text-black border-black hover:border-red-600 hover:text-red-600 hover:bg-black mt-4 lg:mt-0">Add New Match</a>
+<div class="mx-auto">
+    <div class="relative flex flex-col w-full h-full overflow-scroll text-slate-300 bg-slate-800 shadow-md rounded-lg bg-clip-border">
+        <table class="w-full text-left table-auto min-w-max mx-10">
+            <thead>
+            <tr>
+                <th class="p-4 border-b border-slate-600 bg-slate-700">
+                    <p class="text-2xl font-normal leading-none text-slate-300">
+                        Team 1
+                    </p>
+                </th>
+                <th class="p-4 border-b border-slate-600 bg-slate-700">
+                    <p class="text-2xl font-normal leading-none text-slate-300">
+                        Team 2
+                    </p>
+                </th>
+                <th class="p-4 border-b border-slate-600 bg-slate-700">
+                    <p class="text-2xl font-normal leading-none text-slate-300">
+                        Score
+                    </p>
+                </th>
+                <th class="p-4 border-b border-slate-600 bg-slate-700">
+                    <p class="text-2xl font-normal leading-none text-slate-300">
+                        Date
+                    </p>
+                </th>
+                <th class="p-4 border-b border-slate-600 bg-slate-700">
+                    <p class="text-2xl font-normal leading-none text-slate-300">
+                        Edit
+                    </p>
+                </th>
+                <th class="p-4 border-b border-slate-600 bg-slate-700">
+                    <p class="text-2xl font-normal leading-none text-slate-300">
+                        Delete
+                    </p>
+                </th>
+            </tr>
+            </thead>
+            <tbody>
 
+            <?php
+            $sql = "SELECT 
+                        m.id,
+                        t1.teamName AS team1Name,
+                        t2.teamName AS team2Name,
+                        m.team1goals,
+                        m.team2goals,
+                        m.matchDate
+                    FROM 
+                        matches m
+                    JOIN 
+                        teams t1 ON m.team1ID = t1.id
+                    JOIN 
+                        teams t2 ON m.team2ID = t2.id";
+            $result = mysqli_query($conn, $sql);
+            while ($row = mysqli_fetch_assoc($result)) {
+
+                echo "<tr class='hover:bg-slate-700'>
+                                <td class='p-4 border-b border-slate-700 text-lg'>" . $row['team1Name'] . "</td>
+                                <td class='p-4 border-b border-slate-700 text-lg'>" . $row['team2Name'] . "</td>
+                                <td class='p-4 border-b border-slate-700 text-lg'>" . $row['team1goals'] ." : " .$row['team2goals'] . "</td>
+                                <td class='p-4 border-b border-slate-700 text-lg'>" . $row['matchDate'] . "</td>
+                                <td class='p-4 border-b border-slate-700 text-lg'><a href='editMatch.php?id=". $row['id']."' class='inline-block text-lg px-4 py-2 leading-none border rounded text-black border-black hover:border-red-600 hover:text-red-600 hover:bg-black mt-4 lg:mt-0'>Edit</a></td>
+                                <td class='p-4 border-b border-slate-700 text-lg'><a href='deleteMatch.php?id=" . $row['id']."' class='inline-block text-lg px-4 py-2 leading-none border rounded text-black border-black hover:border-red-600 hover:text-red-600 hover:bg-black mt-4 lg:mt-0'>Delete</a></td>
+                          </tr>";
+            }
+            ?>
+            </tbody>
+        </table>
+    </div>
+</div>
 </body>
 </html>
 
