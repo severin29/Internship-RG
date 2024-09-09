@@ -26,7 +26,6 @@ if(!isset($_POST['username']) && !isset($_POST['password'])){
         if (mysqli_num_rows($result) === 1) {
             $row = mysqli_fetch_assoc($result);
             if($row['username'] == $username && $row['password'] == $password){
-                print_r($row);
                 $_SESSION['username'] = $row['username'];
                 $_SESSION['password'] = $row['password'];
                 header('Location: dashboard.php');

@@ -8,7 +8,6 @@ if (!isset($_SESSION['username'])) {
 }
 
 if(isset($_POST['submit'])) {
-    print_r($_POST);
 
     $team1ID = $_POST['team1'];
     $team2ID = $_POST['team2'];

@@ -67,7 +67,6 @@ $sql = "SELECT * FROM teams WHERE id = '$id'";
 $result = mysqli_query($conn, $sql);
 $row = mysqli_fetch_assoc($result);
 
-print_r($row);
 
 ?>
 <form class="w-full max-w-lg justify-center items-center" method="post">

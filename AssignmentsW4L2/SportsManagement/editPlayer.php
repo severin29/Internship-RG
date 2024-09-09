@@ -7,7 +7,6 @@ if (!isset($_SESSION['username'])) {
     exit();
 }
 
-print_r($_GET);
 
 
 $sql = 'SELECT * FROM teams';
@@ -15,7 +14,6 @@ $result = mysqli_query($conn, $sql);
 
 if(isset($_POST['submit'])) {
 
-    print_r($_POST);
 
     $name = $_POST['name'];
     $age = $_POST['age'];
