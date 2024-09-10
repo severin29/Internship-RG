@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f88c3bf-0881-4d78-9a1b-b821ebfffee3" name="Changes" comment="" />
+    <list default="true" id="1f88c3bf-0881-4d78-9a1b-b821ebfffee3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpunit.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssignmentsW4L2/SportsManagement/db.php" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentsW4L2/SportsManagement/db.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -138,7 +143,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;AssignmentW4L2&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;#3 on AssignmentW4L2&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/severin.kolakov/Desktop/Internship-RG/Internship-RG/AssignmentsW3L2&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -184,6 +189,9 @@
       <workItem from="1725633256432" duration="6000" />
       <workItem from="1725633271066" duration="17917000" />
       <workItem from="1725821487112" duration="24682000" />
+      <workItem from="1725904710063" duration="195000" />
+      <workItem from="1725909662744" duration="580000" />
+      <workItem from="1725948936814" duration="1322000" />
     </task>
     <servers />
   </component>
