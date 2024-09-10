@@ -45,8 +45,8 @@ function sendToLogin(){
     <h1>RG School</h1>
     <h3>All in one school management solution</h3>
     <div class="hero-buttons">
-        <button type="button" class="btn btn-secondary">Browse Users</button>
-        <button type="button"  class="btn btn-success">Log in</button>
+        <button type="button"  class="btn btn-secondary">Browse Users</button>
+        <button type="button" class="btn btn-success">Log in</button>
     </div>
 </div>
 <div class="main-body">
