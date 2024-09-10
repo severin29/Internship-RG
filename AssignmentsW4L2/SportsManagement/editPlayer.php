@@ -45,7 +45,7 @@ if(isset($_POST['submit'])) {
 <body>
 <nav class="flex items-center justify-between flex-wrap bg-black p-6">
     <div class="flex items-center flex-shrink-0 text-white mr-6">
-        <span class="font-semibold text-2xl tracking-tight">RG Sports</span>
+        <a href="dashboard.php" class="font-semibold text-2xl tracking-tight">RG Sports</a>
     </div>
     <div class="block lg:hidden">
         <button class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
@@ -71,8 +71,10 @@ if(isset($_POST['submit'])) {
 </nav>
 <?php
 
-
-
+$id = $_GET['id'];
+$editQuery = "SELECT * FROM players WHERE id = '$id'";
+$resultEdit = mysqli_query($conn, $editQuery);
+$editRow = mysqli_fetch_assoc($resultEdit);
 ?>
 <form class="w-full max-w-lg justify-center items-center" method="post">
     <div class="flex flex-wrap -mx-3 mb-6">
@@ -80,7 +82,7 @@ if(isset($_POST['submit'])) {
             <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
                 Name
             </label>
-            <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" name="name" placeholder="Jane">
+            <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" name="name" value="<?php echo $editRow['name'] ?>">
             <p class="text-red-500 text-xs italic">Please fill out this field.</p>
         </div>
     </div>
@@ -89,7 +91,7 @@ if(isset($_POST['submit'])) {
             <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
                 Age
             </label>
-            <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-age" type="number" name="age" placeholder="Enter player age">
+            <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-age" type="number" name="age" value="<?php echo $editRow['age'] ?>">
         </div>
     </div>
     <div class="flex flex-wrap -mx-3 mb-2">
