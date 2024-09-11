@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f88c3bf-0881-4d78-9a1b-b821ebfffee3" name="Changes" comment="" />
+    <list default="true" id="1f88c3bf-0881-4d78-9a1b-b821ebfffee3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/AssignmentsW5L1/src/Enum/OrderStatus.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fb8e9f0d-f3c9-4229-bf32-f185c0df3b35.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/fb8e9f0d-f3c9-4229-bf32-f185c0df3b35.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,7 +34,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/AssignmentsW5L1" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -138,7 +144,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;#3 on AssignmentW4L2&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/severin.kolakov/Desktop/Internship-RG/Internship-RG/AssignmentsW3L2&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -187,6 +193,7 @@
       <workItem from="1725904710063" duration="195000" />
       <workItem from="1725909662744" duration="580000" />
       <workItem from="1725948936814" duration="1481000" />
+      <workItem from="1725978545764" duration="1413000" />
     </task>
     <servers />
   </component>
