@@ -34,9 +34,10 @@ class GenreController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $em->persist($genre);
             $em->flush();
+            return $this->redirectToRoute('genres_index');
         }
         return $this->render('genre/create.html.twig', [
-            'form' => $form->createView(),
+            'form' => $form->createView()
         ]);
     }
 
@@ -52,8 +53,11 @@ class GenreController extends AbstractController
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
             $em->flush();
+            return $this->redirectToRoute('genres_index');
         }
-        return $this->render('genre/edit.html.twig',);
+        return $this->render('genre/edit.html.twig', [
+            'form' => $form->createView(),
+        ]);
     }
 
     #[Route('/genres/delete{id}', name: 'genre_delete')]

@@ -30,10 +30,30 @@ class EditorController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $em->persist($editor);
             $em->flush();
+            return $this->redirectToRoute('editor_index');
         }
         return $this->render('editor/create.html.twig', ['form' => $form->createView()]);
     }
 
 
-   // #[Route('/editors/edit/{id}', name: 'editor_update')]
+   #[Route('/editors/edit/{id}', name: 'editor_update')]
+    public function updateEditor(Request $request, EntityManagerInterface $em, $id){
+        $editor = $em->getRepository(Editor::class)->find($id);
+        $form = $this->createForm(EditorType::class, $editor);
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            $em->flush();
+            return $this->redirectToRoute('editor_index');
+        }
+        return $this->render('editor/edit.html.twig', ['form' => $form->createView()]);
+   }
+
+   #[Route('/editors/delete/{id}', name: 'editor_delete')]
+    public function deleteEditor(Request $request, EntityManagerInterface $em, $id)
+   {
+       $editor = $em->getRepository(Editor::class)->find($id);
+       $em->remove($editor);
+       $em->flush();
+       return $this->redirectToRoute('editors_read');
+   }
 }

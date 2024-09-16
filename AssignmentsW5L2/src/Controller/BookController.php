@@ -51,6 +51,7 @@ class BookController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
 
             $em->flush();
+            return $this->redirectToRoute('books_index');
         }
         return $this->render('book/edit.html.twig', ['form' => $form->createView()]);
     }

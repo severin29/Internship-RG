@@ -9,7 +9,7 @@
 </style>
 
 <div class="example-wrapper">
-    <h1>Hello Editors</h1>
+    <h1>Editors</h1>
 
     <a href="{{ path('editor_create') }}" class="btn btn-success">Create New Editor</a>
     <table class="table table-hover">
@@ -39,8 +39,8 @@
                     </ul>
                 </td>
                 <td scope="row" style="display: flex; flex-direction: row" >
-                    <a href="{{ path('author_edit', {id: editor.id}) }}" class="btn btn-primary mx-1">Edit</a>
-                    <form method="POST" action="{{ path('author_delete', {id:  editor.id}) }}">
+                    <a href="{{ path('editor_update', {id: editor.id}) }}" class="btn btn-primary mx-1">Edit</a>
+                    <form method="POST" action="{{ path('editor_delete', {id:  editor.id}) }}">
                         <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ editor.id) }}">
                         <button class="btn btn-danger">Delete</button>
                     </form>

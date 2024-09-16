@@ -21,9 +21,9 @@ class AuthorType extends AbstractType
             ->add('nationality', TextType::class)
             ->add('books', EntityType::class,
                 ['class' => Book::class,
-                 'choice_label' => 'name',
+                 'choice_label' => 'title',
                  'multiple' => true,
-                 'expanded' => true,])
+                 ])
         ;
     }
 
