@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <h1>Create Book</h1>
+
+    {{ form_start(form) }}
+    {{ form_row(form.title) }}
+    {{ form_row(form.isbn) }}
+    {{ form_row(form.publishDate) }}
+    {{ form_row(form.author) }}
+    {{ form_row(form.editors) }}
+    {{ form_row(form.genres) }}
+    <button type="submit" class="btn btn-success">Create</button>
+    {{ form_end(form) }}
+
+
+{% endblock %}
