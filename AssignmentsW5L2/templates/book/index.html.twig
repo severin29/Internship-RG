@@ -1,0 +1,91 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello BookController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 80%; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1>Books </h1>
+    <a href="{{ path('book_create') }}" class="btn btn-success">Create New Book</a>
+    <table class="table table-hover">
+        <thead class="thead-light">
+        <tr>
+            <th scope="col">Title</th>
+            <th scope="col">ISBN</th>
+            <th scope="col">Publish Date</th>
+            <th scope="col">Author</th>
+            <th scope="col">Genre</th>
+            <th scope="col">Editors</th>
+            <th scope="col">Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for book in books %}
+            <tr>
+                <td scope="row">{{ book.title }}</td>
+                <td scope="row">{{ book.isbn }}</td>
+                {% if book.publishDate %}
+                    <td scope="row">{{ book.publishDate|date('Y-m-d')}}</td>
+                {% else %}
+                    <em>No Publish Date</em>
+                {% endif %}
+                <td scope="row">{{ book.author.name }}</td>
+                <td scope="row">
+                    <button type="button" onclick="toggleGenres({{ book.id }})" class="btn btn-secondary">Show Genres</button>
+                    <ul id="genres-{{ book.id }}" style="display: none;">
+                        {% for genre in book.genres %}
+                            <li>{{ genre.name }}</li>
+                        {% else %}
+                            <li>No editors</li>
+                        {% endfor %}
+                    </ul>
+                </td>
+                <td scope="row">
+                    <button type="button" onclick="toggleEditors({{ book.id }})" class="btn btn-secondary">Show Editors</button>
+                    <ul id="editors-{{ book.id }}" style="display: none;">
+                        {% for editor in book.editors %}
+                            <li>{{ editor.name }}</li>
+                        {% else %}
+                            <li>No editors</li>
+                        {% endfor %}
+                    </ul>
+                </td>
+                <td scope="row" style="display: flex; flex-direction: row" >
+                    <a href="{{ path('book_update', {id: book.id}) }}" class="btn btn-primary mx-1">Edit</a>
+                    <form method="POST" action="{{ path('book_delete', {id:  book.id}) }}">
+                        <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ book.id) }}">
+                        <button class="btn btn-danger">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <script>
+        function toggleEditors(authorId) {
+            const booksList = document.getElementById(`editors-${authorId}`);
+            if (booksList.style.display === "none") {
+                booksList.style.display = "block";
+            } else {
+                booksList.style.display = "none";
+            }
+        }
+
+
+        function toggleGenres(authorId) {
+            const booksList = document.getElementById(`genres-${authorId}`);
+            if (booksList.style.display === "none") {
+                booksList.style.display = "block";
+            } else {
+                booksList.style.display = "none";
+            }
+        }
+    </script>
+
+</div>
+{% endblock %}

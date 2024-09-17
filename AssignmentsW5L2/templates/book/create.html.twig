@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h1 class="mb-4">Create Book</h1>
+                {{ form_start(form) }}
+
+                <div class="mb-3">
+                    {{ form_label(form.title, null, {'label_attr': {'class': 'form-label'}}) }}
+                    {{ form_widget(form.title, {'attr': {'class': 'form-control'}}) }}
+                    {{ form_errors(form.title) }}
+                </div>
+
+                <div class="mb-3">
+                    {{ form_label(form.isbn, null, {'label_attr': {'class': 'form-label'}}) }}
+                    {{ form_widget(form.isbn, {'attr': {'class': 'form-control'}}) }}
+                    {{ form_errors(form.isbn) }}
+                </div>
+                <div class="mb-3">
+                    {{ form_label(form.publishDate, null, {'label_attr': {'class': 'form-label'}}) }}
+                    {{ form_widget(form.publishDate, {'attr': {'class': 'form-control'}}) }}
+                    {{ form_errors(form.publishDate) }}
+                </div>
+                <div class="mb-3">
+                    {{ form_label(form.author, null, {'label_attr': {'class': 'form-label'}}) }}
+                    {{ form_widget(form.author, {'attr': {'class': 'form-control'}}) }}
+                    {{ form_errors(form.author) }}
+                </div>
+                <div class="mb-3">
+                    {{ form_label(form.editors, null, {'label_attr': {'class': 'form-label'}}) }}
+                    {{ form_widget(form.editors, {'attr': {'class': 'form-control'}}) }}
+                    {{ form_errors(form.editors) }}
+                </div>
+                <div class="mb-3">
+                    {{ form_label(form.genres, null, {'label_attr': {'class': 'form-label'}}) }}
+                    {{ form_widget(form.genres, {'attr': {'class': 'form-control'}}) }}
+                    {{ form_errors(form.genres) }}
+                </div>
+
+                <button type="submit" class="btn btn-success">Create</button>
+                <a href="{{ path('books_index') }}" class="btn btn-secondary">Back to List</a>
+
+                {{ form_end(form) }}
+            </div>
+        </div>
+    </div>
+{% endblock %}

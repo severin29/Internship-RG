@@ -1,0 +1,63 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello GenreController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1>Genres</h1>
+    <a href="{{ path('genre_create') }}" class="btn btn-success">Create New Genre</a>
+
+    <table class="table table-hover">
+        <thead class="thead-light">
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Books</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for genre in genres %}
+            <tr>
+                <td scope="row">{{ genre.name }}</td>
+                <td scope="row">{{ genre.description }}</td>
+                <td scope="row">
+                    <button type="button" onclick="toggleBooks({{ genre.id }})" class="btn btn-secondary">Show Books</button>
+                    <ul id="books-{{ genre.id }}" style="display: none;">
+                        {% for book in genre.books %}
+                            <li>{{ book.title }}</li>
+                        {% else %}
+                            <li>No books</li>
+                        {% endfor %}
+                    </ul>
+                </td>
+                <td scope="row" style="display: flex; flex-direction: row" >
+                    <a href="{{ path('genre_edit', {id: genre.id}) }}" class="btn btn-primary mx-1">Edit</a>
+                    <form method="POST" action="{{ path('genre_delete', {id:  genre.id}) }}">
+                        <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ genre.id) }}">
+                        <button class="btn btn-danger">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <script>
+        function toggleBooks(bookId) {
+            const booksList = document.getElementById(`books-${bookId}`);
+            if (booksList.style.display === "none") {
+                booksList.style.display = "block";
+            } else {
+                booksList.style.display = "none";
+            }
+        }
+    </script>
+
+</div>
+{% endblock %}
