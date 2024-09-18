@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Homepage{% endblock %}
+
+{% block body %}
+    <style>
+        .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+
+    </style>
+
+    <div class="example-wrapper">
+        {% for comment in comments %}
+            <div class="card">
+                <div class="card-header">
+                    {{ comment.author.name }}
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">{{ comment.title }}</h5>
+                    <p class="card-text">{{ comment.content }}</p>
+                    <a href="{{ path('comment_edit', {id: comment.id}) }}" class="btn btn-primary">Edit Comment</a>
+                    <a href="{{ path('comment_delete', {id: comment.id}) }}" class="btn btn-primary">Delete Comment</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
