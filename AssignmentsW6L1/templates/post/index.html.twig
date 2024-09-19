@@ -4,7 +4,7 @@
 
 {% block body %}
 <style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper { margin: 1em auto; max-width: 1200px; width: 95%; font: 18px/1.5 sans-serif; }
 </style>
 <div class="example-wrapper">
 
@@ -13,16 +13,24 @@
     {% endif %}
 
     {% for post in posts %}
-        <div class="card">
+        <div class="card my-3">
             <div class="card-header">
                 {{ post.author.username }}
             </div>
             <div class="card-body">
-                <h5 class="card-title">{{ post.title }}</h5>
+                <h4 class="card-title">{{ post.title }}</h4>
                 <p class="card-text">{{ post.content }}</p>
+                <p><em>Average Rating:</em> {{ post.getAverageRating() }} / 5</p>
+                <h5 class="card-text fs-5">Comments</h5>
+                <ul>
+                {% for comment in post.comments %}
+                    <li> {{ comment.content }} by {{ comment.author.username }}</li> {% if is_granted('ROLE_AUTHOR') %}<a href="{{ path('comment_delete', {'id': comment.id}) }}" class="btn btn-danger">Delete</a> {% endif %}
+                    <p>Rating: {{ comment.rating }} / 5</p>
+                {% endfor %}
+                </ul>
                 <a href="{{ path('post_edit', {'id': post.id}) }}" class="btn btn-primary">Edit Post</a>
                 <a href="{{ path('post_delete', {'id': post.id}) }}" class="btn btn-primary">Delete Post</a>
-                <a href="{{ path('comment_create', {'postId': post.id}) }}" class="btn btn-primary">Write a comment</a>
+                <a href="{{ path('comment_create', {'id': post.id}) }}" class="btn btn-primary">Write a comment</a>
             </div>
         </div>
     {% endfor %}

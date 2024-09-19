@@ -27,9 +27,11 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ path('posts_list') }}">Posts</a>
                                 </li>
+                                {% if is_granted('ROLE_ADMIN') %}
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Users</a>
+                                    <a class="nav-link" href="{{ path('list_users') }}">Users</a>
                                 </li>
+                                {% endif %}
                                 {% if app.user %}
                                 <!-- Show logout element when the user is logged in -->
                                 <a href="{{ path('app_logout') }}" class="nav-link">Logout</a>

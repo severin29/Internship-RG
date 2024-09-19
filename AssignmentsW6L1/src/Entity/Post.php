@@ -37,6 +37,24 @@ class Post
         $this->comments = new ArrayCollection();
     }
 
+    public function getAverageRating(): float
+    {
+        $totalRating = 0;
+        $comments = ($this->getComments());
+        $count = count($comments);
+
+        if ($count === 0) {
+
+            return 0;
+        }
+
+        foreach ($comments as $comment) {
+            $totalRating += $comment->getRating();
+        }
+
+        return $totalRating/$count;
+    }
+
     public function getId(): ?int
     {
         return $this->id;

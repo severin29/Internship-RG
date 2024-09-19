@@ -35,7 +35,7 @@ class CommentController extends AbstractController
         $posts = $em->getRepository(Comment::class)->findBy(['author' => $author]);
         return $this->render('post/index.html.twig', ['posts' => $posts, 'author' => $author]);
     }
-    #[Route('/create', name: 'comment_create')]
+    #[Route('/create/{id}', name: 'comment_create')]
     public function createComment(Request $request, PostRepository $postRepository, EntityManagerInterface $em, $id): Response
     {
         $comment = new Comment();
@@ -45,7 +45,7 @@ class CommentController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $comment->setAuthor($this->getUser());
 
-            $post = $postRepository->findOneBy($id);
+            $post = $postRepository->find($id);
             $comment->setPost($post);
             $em->persist($comment);
             $em->flush();
@@ -70,9 +70,10 @@ class CommentController extends AbstractController
     }
 
 
-    #[Route('/delete/{id}', name: 'comment_delete', methods: ['POST'])]
-    public function deleteComment(Comment $comment, EntityManagerInterface $em): Response
+    #[Route('/delete/{id}', name: 'comment_delete')]
+    public function deleteComment(EntityManagerInterface $em, $id): Response
     {
+        $comment = $em->getRepository(Comment::class)->find($id);
         $post = $comment->getPost();
         $currentUser = $this->getUser();
         if ($post->getAuthor() !== $currentUser && $comment->getAuthor() !== $currentUser && !$this->isGranted('ROLE_ADMIN')) {
@@ -80,7 +81,7 @@ class CommentController extends AbstractController
         }
         $em->remove($comment);
         $em->flush();
-        return $this->redirectToRoute('list_post', ['id' => $post->getId()]);
+        return $this->redirectToRoute('posts_list');
     }
 
 

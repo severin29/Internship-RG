@@ -7,6 +7,9 @@ use App\Entity\Post;
 use App\Entity\User;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\IntegerType;
+use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -16,14 +19,18 @@ class CommentType extends AbstractType
     {
         $builder
             ->add('content')
-            ->add('author', EntityType::class, [
-                'class' => User::class,
-                'choice_label' => 'id',
-            ])
-            ->add('post', EntityType::class, [
-                'class' => Post::class,
-                'choice_label' => 'id',
-            ])
+            ->add('rating', IntegerType::class, [
+                'label' => 'Rating (1-5)',
+                'attr'=>['min'=>'1', 'max'=>'5'],
+                'required'=>true, ]);
+//            ->add('author', EntityType::class, [
+//                'class' => User::class,
+//                'choice_label' => 'id',
+//            ])
+//            ->add('post', EntityType::class, [
+//                'class' => Post::class,
+//                'choice_label' => 'id',
+//            ])
         ;
     }
 
