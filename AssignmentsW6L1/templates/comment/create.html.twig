@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <h1>Create a new comment</h1>
+    {{ form_start(form) }}
+
+    <div class="form-group">
+        {{ form_label(form.content) }}
+        {{ form_widget(form.content) }}
+        {{ form_errors(form.content) }}
+    </div>
+
+    <button class="btn btn-primary" type="submit">Create Comment</button>
+    {{ form_end(form) }}
+
+    <a href="{{ path('posts_list') }}">Back to all posts</a>
+
+{% endblock %}

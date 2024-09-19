@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Form\CommentType;
+use App\Repository\PostRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -22,7 +23,7 @@ class CommentController extends AbstractController
         return $this->render('comment/index.html.twig', ['comments' => $comments]);
     }
 
-    #[Route('/{id}', name: 'list_comment', methods: ['GET'])]
+    #[Route('/comment/{id}', name: 'list_comment', methods: ['GET'])]
     public function listComment(EntityManagerInterface $em, $id): Response
     {
         $comment = $em->getRepository(Comment::class)->findBy($id);
@@ -35,18 +36,20 @@ class CommentController extends AbstractController
         return $this->render('post/index.html.twig', ['posts' => $posts, 'author' => $author]);
     }
     #[Route('/create', name: 'comment_create')]
-    public function createComment(Request $request, EntityManagerInterface $em): Response
+    public function createComment(Request $request, PostRepository $postRepository, EntityManagerInterface $em, $id): Response
     {
         $comment = new Comment();
         $form = $this->createForm(CommentType::class, $comment);
         $form->handleRequest($request);
+
         if ($form->isSubmitted() && $form->isValid()) {
             $comment->setAuthor($this->getUser());
-            $post = $em->getRepository(Post::class)->find($comment->getPost());
+
+            $post = $postRepository->findOneBy($id);
             $comment->setPost($post);
             $em->persist($comment);
             $em->flush();
-            return $this->redirectToRoute('comment_list');
+            return $this->redirectToRoute('posts_list');
         }
         return $this->render('comment/create.html.twig', ['form' => $form->createView()]);
     }

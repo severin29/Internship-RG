@@ -18,6 +18,9 @@ class PostController extends AbstractController
     #[Route('/', name: 'posts_list')]
     public function listPosts(EntityManagerInterface $em): Response
     {
+        if(!$this->getUser()){
+            return $this->redirectToRoute('app_login');
+        }
        $posts = $em->getRepository(Post::class)->findAll();
        return $this->render('post/index.html.twig', ['posts' => $posts]);
     }
@@ -36,10 +39,10 @@ class PostController extends AbstractController
     }
 
     #[Route('/create', name: 'post_create')]
-
+    #[IsGranted('ROLE_AUTHOR')]
     public function createPost(Request $request, EntityManagerInterface $em): Response
     {
-        if(!$this->isGranted('ROLE_AUTHOR') || !$this->isGranted('ROLE_ADMIN') ){
+        if(!$this->isGranted('ROLE_ADMIN') || !$this->isGranted('ROLE_AUTHOR') ){
             return $this->redirectToRoute('posts_list');
             $this->addFlash('Denial', 'You cannot create a post!');
         }
@@ -88,4 +91,7 @@ class PostController extends AbstractController
         $em->flush();
         return $this->redirectToRoute('posts_list');
     }
+
+
+
 }
