@@ -31,7 +31,7 @@ class ProductController extends AbstractController
         $this->em = $em;
     }
 
-    #[Route("/", name: "get_all_products", methods: ["GET"])]
+    #[Route("/list", name: "get_all_products", methods: ["GET"])]
     public function getAllProducts(SerializerInterface $serializer): JsonResponse{
         $products = $this->em->getRepository(Product::class)->findAll();
 
@@ -40,7 +40,7 @@ class ProductController extends AbstractController
     }
 
 
-    #[Route("/{id}", name: "get_product", methods: ["GET"])]
+    #[Route("/list/{id}", name: "get_product", methods: ["GET"])]
     public function getProduct(SerializerInterface $serializer, $id): JsonResponse{
         $product = $this->em->getRepository(Product::class)->find($id);
 
@@ -72,7 +72,7 @@ class ProductController extends AbstractController
         return new JsonResponse("Product created", 201);
     }
 
-    #[Route("/{id}", name: "update_product", methods: ["PUT"])]
+    #[Route("/edit/{id}", name: "update_product", methods: ["PUT"])]
     public function updateProduct(Request $request, $id): JsonResponse{
 
         $product = $this->em->getRepository(Product::class)->find($id);
@@ -97,7 +97,7 @@ class ProductController extends AbstractController
         return new JsonResponse("Product updated", 201);
     }
 
-    #[Route("/{id}", name: "delete_product", methods: ["DELETE"])]
+    #[Route("/delete/{id}", name: "delete_product", methods: ["DELETE"])]
     public function deleteProduct(Request $request, $id): JsonResponse{
 
         $product = $this->em->getRepository(Product::class)->find($id);
