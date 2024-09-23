@@ -167,6 +167,6 @@ class __TwigTemplate_45391138ef924328e432f4ae40761daf extends Template
 
     {{ include('@WebProfiler/Profiler/toolbar_item.html.twig', { link: profiler_url }) }}
 {% endblock %}
-", "@WebProfiler/Profiler/cancel.html.twig", "/Users/severin.kolakov/Desktop/cloning/Internship-RG/AssignmentsW5L1/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/cancel.html.twig");
+", "@WebProfiler/Profiler/cancel.html.twig", "/Users/severin.kolakov/Desktop/InternshipRG/Internship-RG/AssignmentsW5L1/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/cancel.html.twig");
     }
 }

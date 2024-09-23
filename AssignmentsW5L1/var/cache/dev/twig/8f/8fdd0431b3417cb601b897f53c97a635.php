@@ -463,6 +463,6 @@ class __TwigTemplate_d8655896565ff3c299fd485d2fd7cc02 extends Template
         </div>
     </div>
 {% endblock %}
-", "@WebProfiler/Profiler/layout.html.twig", "/Users/severin.kolakov/Desktop/cloning/Internship-RG/AssignmentsW5L1/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/layout.html.twig");
+", "@WebProfiler/Profiler/layout.html.twig", "/Users/severin.kolakov/Desktop/InternshipRG/Internship-RG/AssignmentsW5L1/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/layout.html.twig");
     }
 }

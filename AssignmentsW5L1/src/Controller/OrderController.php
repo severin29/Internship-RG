@@ -36,7 +36,7 @@ class OrderController extends AbstractController
         $this->em = $em;
     }
 
-    #[Route("/", name: "get_all_orders", methods: ["GET"])]
+    #[Route("/list", name: "get_all_orders", methods: ["GET"])]
     public function getAllOrders(SerializerInterface $serializer): JsonResponse{
         $orders = $this->em->getRepository(Order::class)->findAll();
 
@@ -44,7 +44,7 @@ class OrderController extends AbstractController
         return new JsonResponse($json, 200, [], true);
     }
 
-    #[Route("/{id}", name: "get_order", methods: ["GET"])]
+    #[Route("/list/{id}", name: "get_order", methods: ["GET"])]
     public function getOrder(SerializerInterface $serializer, $id): JsonResponse{
         $order = $this->em->getRepository(Order::class)->find($id);
 
@@ -55,10 +55,9 @@ class OrderController extends AbstractController
         return new JsonResponse($json, 200, [], true);
     }
 
-    #[Route("/", name: "create_order", methods: ["POST"])]
+    #[Route("/create", name: "create_order", methods: ["POST"])]
     public function createOrder(Request $request): JsonResponse{
         $data = json_decode($request->getContent(), true);
-        print_r($data);
         if(empty($data['customer'])){
             return new JsonResponse("Invalid data", 400);
         }
@@ -73,7 +72,7 @@ class OrderController extends AbstractController
         return new JsonResponse("Order created", 201);
     }
 
-    #[Route("/{id}", name: "update_order", methods: ["PUT"])]
+    #[Route("/edit/{id}", name: "update_order", methods: ["PUT"])]
     public function updateCategory(Request $request, $id): JsonResponse{
 
         $order = $this->em->getRepository(Order::class)->find($id);
@@ -98,7 +97,7 @@ class OrderController extends AbstractController
     }
 
 
-    #[Route("/{id}", name: "delete_order", methods: ["DELETE"])]
+    #[Route("/delete/{id}", name: "delete_order", methods: ["DELETE"])]
     public function deleteOrder(Request $request, $id): JsonResponse{
 
         $order = $this->em->getRepository(Order::class)->find($id);

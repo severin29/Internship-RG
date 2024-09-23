@@ -23,7 +23,7 @@ class CategoryController extends AbstractController
         $this->em = $em;
     }
 
-    #[Route("/", name: "get_all_categories", methods: ["GET"])]
+    #[Route("/list/", name: "get_all_categories", methods: ["GET"])]
     public function getAllCategories(SerializerInterface $serializer): JsonResponse{
         $categories = $this->em->getRepository(Category::class)->findAll();
 
@@ -32,7 +32,7 @@ class CategoryController extends AbstractController
     }
 
 
-    #[Route("/{id}", name: "get_category", methods: ["GET"])]
+    #[Route("/list/{id}", name: "get_category", methods: ["GET"])]
     public function getCategory(SerializerInterface $serializer,$id): JsonResponse{
         $category = $this->em->getRepository(Category::class)->find($id);
 
@@ -59,7 +59,7 @@ class CategoryController extends AbstractController
         return new JsonResponse("Category created", 201);
     }
 
-    #[Route("/{id}", name: "update_category", methods: ["PUT"])]
+    #[Route("/edit/{id}", name: "update_category", methods: ["PUT"])]
     public function updateCategory(Request $request, $id): JsonResponse{
 
         $category = $this->em->getRepository(Category::class)->find($id);
@@ -81,7 +81,7 @@ class CategoryController extends AbstractController
         return new JsonResponse("Category updated", 201);
     }
 
-    #[Route("/{id}", name: "delete_category", methods: ["DELETE"])]
+    #[Route("/delete/{id}", name: "delete_category", methods: ["DELETE"])]
     public function deleteCategory(Request $request, $id): JsonResponse{
 
         $category = $this->em->getRepository(Category::class)->find($id);

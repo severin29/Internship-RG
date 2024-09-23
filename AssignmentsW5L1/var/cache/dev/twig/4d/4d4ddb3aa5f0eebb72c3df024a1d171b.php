@@ -1866,6 +1866,6 @@ class __TwigTemplate_912109e13a9b521380d95e395e825d14 extends Template
         </tbody>
     </table>
 {% endmacro %}
-", "@Doctrine/Collector/db.html.twig", "/Users/severin.kolakov/Desktop/cloning/Internship-RG/AssignmentsW5L1/vendor/doctrine/doctrine-bundle/templates/Collector/db.html.twig");
+", "@Doctrine/Collector/db.html.twig", "/Users/severin.kolakov/Desktop/InternshipRG/Internship-RG/AssignmentsW5L1/vendor/doctrine/doctrine-bundle/templates/Collector/db.html.twig");
     }
 }

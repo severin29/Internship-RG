@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>All Customers</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">RG Shop</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Products</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="categories.html">Categories</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="customers.html">Customers</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="orders.html">Orders</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<section id="customerSection">
+    <div class="container">
+        <h1 class="mt-4">Customers</h1>
+        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#customerModal">Add new customer</button>
+        <table class="table table-hover table-bordered mt-3">
+            <thead class="thead-dark">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Address</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Actions</th>
+            </tr>
+            </thead>
+            <tbody id="customerTable">
+            </tbody>
+        </table>
+    </div>
+</section>
+<div class="modal fade" id="customerModal" tabindex="-1" aria-labelledby="customerModalLabel" aria-hidden="true" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="customerModalLabel">Add Customer</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="customerForm" >
+                    <input type="hidden"  id="customerId">
+                    <div class="form-group">
+                        <label for="customerName">Customer Name</label>
+                        <input type="text" class="form-control" id="customerName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="customerEmail">Customer Email</label>
+                        <input type="email" class="form-control" id="customerEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="customerAddress">Customer Address</label>
+                        <input type="text" class="form-control" id="customerAddress" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="customerPhone">Customer Phone</label>
+                        <input type="text" class="form-control" id="customerPhone" required>
+                    </div>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Save</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+
+    function deleteCustomer(customerId) {
+        if (confirm('Are you sure you want to delete this customer?')) {
+            axios.delete(`/api/customers/delete/${customerId}`)
+                .then(response => {
+                    console.log('Customer deleted:', response.data);
+                    window.location.reload()
+                })
+                .catch(error => {
+                    console.error('Error deleting customer:', error);
+                });
+        }
+    }
+
+    document.getElementById('customerForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const customerId = document.getElementById('customerId').value;
+
+
+        if(!customerId){
+            const customerName = document.getElementById('customerName').value;
+            const customerEmail = document.getElementById('customerEmail').value;
+            const customerAddress = document.getElementById('customerAddress').value;
+            const customerPhone = document.getElementById('customerPhone').value;
+
+            const newCustomer = {
+                name:customerName,
+                email:customerEmail,
+                address: customerAddress,
+                phone: customerPhone
+
+            };
+
+            axios.post('/api/customers/create', newCustomer).then(response => {
+                alert('Customer Added');
+                $('customerModal').modal('hide');
+
+                document.getElementById('customerForm').reset();
+                fetchCustomers();
+                window.location.reload();
+            })
+
+        }else{
+            const customerName = document.getElementById('customerName').value;
+            const customerEmail = document.getElementById('customerEmail').value;
+            const customerAddress = document.getElementById('customerAddress').value;
+            const customerPhone = document.getElementById('customerPhone').value;
+
+            const customerData = {
+                id: customerId,
+                name:customerName,
+                email:customerEmail,
+                address: customerAddress,
+                phone: customerPhone
+            };
+
+            axios.put(`/api/customers/edit/${customerId}`, customerData)
+                .then(response => {
+                    console.log('Customer updated:', response.data);
+                    $('#productModal').modal('hide');
+                    fetchCustomers();
+                    window.location.reload()
+                })
+                .catch(error => console.error('Error updating product:', error));
+        };
+
+    });
+
+
+    function openEditModal(id, name, email, address, phone) {
+        console.log(id, name, email, address, phone)
+        document.getElementById('customerModalLabel').textContent = "Edit Customer";
+
+        document.getElementById('customerId').value = id;
+        document.getElementById('customerName').value = name;
+        document.getElementById('customerEmail').value = email;
+        document.getElementById('customerAddress').value = address;
+        document.getElementById('customerPhone').value = phone;
+
+        $('#customerModal').modal('show');
+    }
+
+    function fetchCustomers(){
+        axios.get('/api/customers/list/')
+            .then(response => {
+                const data = response.data;
+                const customerTable = document.getElementById("customerTable");
+                customerTable.innerHTML = '';
+                data.forEach(customer => {
+                    const row = `
+                                <tr>
+                                    <td>${customer.id}</td>
+                                    <td>${customer.name}</td>
+                                    <td>${customer.email}</td>
+                                    <td>${customer.address}</td>
+                                    <td>${customer.phone}</td>
+                                    <td>
+                                        <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#customerModal" onclick="openEditModal('${customer.id}', '${customer.name}', '${customer.email}', '${customer.address}', ${customer.phone})">Edit</button>
+                                        <button class="btn btn-danger btn-sm" onclick="deleteCustomer(${customer.id})">Delete</button>
+                                    </td>
+                                </tr>
+                            `;
+                    customerTable.innerHTML += row;
+                });
+            })
+            .catch(error => {
+                alert('Error Fetching Customers');
+            })
+    }
+
+    window.onload = function (){
+    fetchCustomers();
+};
+
+</script>
+</body>
+</html>
