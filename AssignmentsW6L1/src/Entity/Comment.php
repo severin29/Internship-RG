@@ -67,12 +67,12 @@ class Comment
         return $this;
     }
 
-    public function getRating(): ?string
+    public function getRating(): ?int
     {
         return $this->rating;
     }
 
-    public function setRating(string $rating): static
+    public function setRating(int $rating): static
     {
         $this->rating = $rating;
 

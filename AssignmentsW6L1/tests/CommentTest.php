@@ -50,10 +50,6 @@ class CommentTest extends TestCase
         $this->assertSame($post, $comment->getPost());
     }
 
-    public function testGetId()
-    {
-
-    }
 
     public function testGetContent()
     {

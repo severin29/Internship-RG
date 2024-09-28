@@ -75,7 +75,7 @@ class UserTest extends TestCase
     public function testSetRoles()
     {
         $user = new User();
-        $roles = ['ROLE_ADMIN'];
+        $roles = ['ROLE_ADMIN', 'ROLE_USER'];
         $user->setRoles($roles);
 
         $this->assertEquals($roles, $user->getRoles());
